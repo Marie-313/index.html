@@ -9,7 +9,7 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: rgb(252, 251, 251);
+        background-color: rgb(247, 243, 226);
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -18,8 +18,8 @@
       main {flex: 1}
 
       header {
-        background-color: #f7daa0;
-        color: rgb(13, 14, 10);
+        background-color: #082d58;
+        color: rgb(247, 250, 238);
         padding: 10px 20px;
         display: flex;
         justify-content: space-between;
@@ -43,8 +43,8 @@
    
       nav a.active {
         text-decoration: underline;
-        color: #fff;
-        background-color: orange;
+        color: #f8f2f2;
+        background-color: rgb(170, 155, 116);
         padding: 3px 10px;
         border-radius: 5px;
       }
@@ -70,14 +70,14 @@
       }
 
       nav a {
-        color: rgb(114, 112, 108);
+        color: rgb(247, 243, 230);
         text-decoration: none;
         font-weight: bold;
       }
 
       nav a:hover {
         text-decoration: underline;
-        color: rgb(185, 185, 129);
+        color: rgb(110, 110, 74);
       }
 
       main {
@@ -96,12 +96,11 @@
       }
 
       footer {
-        text-align: center;
-        padding: 10px 0px;
-        font-size: 0.9rem;
-        margin-top: 0;
-        line-height: 1.2;
-        border: #fdf7d1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        border: #746d40;
       }
 
       footer a {
@@ -112,11 +111,11 @@
       }
 
       footer a:hover {
-        color: rgb(224, 104, 6);
+        color: rgb(9, 20, 46);
       }
 
       footer p {
-        margin: 5px 0;
+        margin:  0;
       }
 
       img,
@@ -151,10 +150,11 @@
         gap: 20px;
         margin: 20px auto;
         max-width: 1200px;
+        justify-content: center;
       }
 
       .project-item {
-        background-color: #833fdb;
+        background-color: #012e69;
         border-radius: 8px;
         padding: 15px;
         display: flex;
@@ -177,13 +177,13 @@
       }
 
       .project-description h3 {
-        margin: 10px 0 5px;
-        font-size: 1.2rem;
-        color: #fdaa2d;
+        margin: 15px 0 5px;
+        font-size: 1.3rem;
+        color: #fdfcfb;
       }
 
       .project-description p {
-        color: #fffde9;
+        color: #fcf6b9;
         font-size: 0.9rem;
       }
 
@@ -210,16 +210,52 @@
           margin: 5px 0;
         }
       }
-      
+ .hero-image {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px; 
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+     
+
+@media (max-width: 768px) {
+  .hero-image {
+    max-width: 200px;
+  }
+@media (max-width: 480px){
+  .hero-image {
+    max-height: 150px;
+  }
+}
       @media (max-width: 600px) {
         .project-grid {
           grid-template-columns: 1fr;
           gap: 15px;
         }
       }
+#about .image-wrapper {
+  display: inline-block; 
+  padding: 5px; 
+  border-radius: 15px; 
+  background: linear-gradient(45deg, #b30487, #04c0b7); 
+  margin: 20px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+#about img {
+  display: block; 
+  width: 100%; 
+  max-width: 300px; 
+  border-radius: 15px; 
+  border: 5px solid white;
+}
     </style>
   </head>
   <body>
+
     <header>
       <h1>My Portfolio</h1>
       <nav>
@@ -232,12 +268,15 @@
       
       <section id="home" class="active">
         <h2>Hello I'm Maria Weathington</h2>
-        <video controls>
-            <source
-            src="https://www.w3schools.com/html/mov_bbb.mp4"
-            type="video/mp4"
-            />
-        </video>
+    
+  <video autoplay muted loop class="hero-image">
+  <source 
+  src="https://res.cloudinary.com/dh4vmugll/video/upload/v1742941987/1734977596495_eltu6f.mp4" 
+  type="video/mp4">
+</video>
+
+
+
         <p class="medium-text">A Software Developer Based in America.</p>
         <p class="large-text">
             I Specialize in Creating efficient and scalable Software Solutions. 
@@ -260,7 +299,6 @@
   alt="maria with long hair" />
 </section>
 
-
 <section id="projects">
   <h2>My Projects</h2>
   <div class="project-grid">
@@ -269,7 +307,7 @@
         <h3>Project 1</h3>
         <p>
           This was my very first design that made me passionate about Software
-          Development. It was created with CSS, HTML, and JavaScript.
+          Development, I was so excited when It was finished. I just couldn't believe I created it. This is one of my favorite authors. It was created with CSS, HTML, and JavaScript.
         </p>
       </div>
       <div class="project-image">
@@ -285,7 +323,7 @@
       <div class="project-description">
         <h3>Project 2</h3>
         <p>
-          This R&B music project was created with CSS, HTML, and JavaScript.
+          This R&B music page was one of my favorite projects, R&B is my favorite genre of music. It was created with CSS, HTML, and JavaScript.
         </p>
       </div>
       <div class="project-image">
@@ -301,14 +339,13 @@
       <div class="project-description">
         <h3>Project 3</h3>
         <p>
-          This project showcases AI concepts and dynamic interactivity of a joke
-          Machine made by me.
+          This AI ChatBot is a Joke Machine. I decided to make jokes about the Computer industry. It was made with automated language, CSS and HTML.
         </p>
       </div>
       <div class="project-image">
         <img
           src="https://res.cloudinary.com/dh4vmugll/image/upload/v1735581856/joke_machine_project_screenshot_1_guy4fj.jpg"
-          alt="joke machine project screenshot 1 guy4fj"
+          alt="joke machine project screenshot"
         />
       </div>
     </div>
@@ -318,23 +355,87 @@
       <div class="project-description">
         <h3>Project 4</h3>
         <p>
-          A World Clock designed with JavaScript and CSS. I chose a Jade color
-          gradient as the background.
+          A World Clock. I decided to keep simple and clean I made it HTML, JavaScript and CSS.
         </p>
       </div>
       <div class="project-image">
         <img
-          src="https://res.cloudinary.com/dh4vmugll/image/upload/v1735581529/world_clock_project_screenshot_kzabqk.jpg"
-          alt="World Clock project screenshot kzabqk"
+          src="https://res.cloudinary.com/dh4vmugll/image/upload/v1742591781/screencapture-file-C-Users-lines-clearworldclockfinished-html-2025-03-21-16_45_36_vlxn7x.png"
+          alt="clear world clock finished"
         />
       </div>
     </div>
+  
+
+ <div class="project-item">
+      <div class="project-description">
+        <h3>Project 5</h3>
+        <p>
+          This destination page which I named TravelBuddy was created with Python AI on Google Colab. This was a challenging project because the coded instructions had to be exact in order for the destination and itinerary to work but I love how it finally turned out.
+        </p>
+      </div>
+      <div class="project-image">
+        <img
+          src="https://res.cloudinary.com/dh4vmugll/image/upload/v1743009724/screencapture-colab-research-google-drive-1aGekHv-KpcZ5nVZxKKSpxTYQRCQdRQd7-2025-03-26-13_19_29_dond1k.png"
+          alt="destination page"
+        />
+      </div>
+    </div>
+  
+
+<div class="project-item">
+      <div class="project-description">
+        <h3>Project 6</h3>
+        <p>
+          This AI Magazine page was very fun to make. I'm fascinated by the AI Industry and how it's changing the face of Software Development. This was created with HTML. CSS and Javascript
+        </p>
+      </div>
+      <div class="project-image">
+        <img
+          src="https://res.cloudinary.com/dh4vmugll/image/upload/v1742955794/screencapture-file-C-Users-lines-AIMagazine-html-2025-03-25-22_21_51_ddnw8h.png"
+          alt="AI Magazine"
+        />
+      </div>
+    </div>
+
+
+<div class="project-item">
+      <div class="project-description">
+        <h3>Project 7</h3>
+        <p>
+          This Chat project was created as a private place to communicate with friends and loved ones. This was made with HTML, CSS, and javascript
+        </p>
+      </div>
+      <div class="project-image">
+        <img
+          src="https://res.cloudinary.com/dh4vmugll/image/upload/v1742591740/screencapture-file-C-Users-lines-TalkGenie-html-2025-03-21-16_46_53_nycxjr.png"
+          alt="nycxjr"
+        />
+      </div>
+    </div>
+
+<div class="project-item">
+      <div class="project-description">
+        <h3>Project 8</h3>
+        <p>
+          Mary Janes Pet Coupon Page was created out of my love for my cat Princess 😊, she is the black cat in the photo. This was made with HTML, CSS and barcodes.
+        </p>
+      </div>
+      <div class="project-image">
+        <img
+             src="https://res.cloudinary.com/dh4vmugll/image/upload/v1742953118/screencapture-file-C-Users-lines-maryjanespetshop-html-2025-03-25-21_38_05_s69h4u.png"
+          alt="s69h4u"
+        />
+      </div>
+    </div>
+
   </div>
 </section>
 
+
          
     <footer>
-        <p>Contact:
+        <p>Contact Me:
         <a href="mailto:marieloparis@gmail.com" 
         target="_blank">marieloparis@gmail.com</a>
       </p>
@@ -344,8 +445,8 @@
          target="_blank">Marie-313</a>
       </p>
 
-        <p>Vercel:
-        <a href="https://vercel.com/marie-313s-projects/index-html"
+        <p>Vercel Portfolio:
+        <a href="https://vercel.com/marie-313s-projects/index-html" 
          target="_blank">Marie313</a>
         </p>
 
@@ -353,9 +454,6 @@
           <a href="https://www.linkedin.com/in/maria-weathington-06a29922b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bey9wShs7SzmsQUbfQ9GYGA%3D%3D"
           target="_blank">maria-weathington</a>
         </p>
-    </footer>
-
-      
     </footer>
 
 <script>
@@ -378,3 +476,4 @@
 </script>
   </body>
 </html>
+
